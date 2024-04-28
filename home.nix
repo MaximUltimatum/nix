@@ -9,6 +9,11 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
   programs.neovim = {
     enable = true;
     coc.enable = true;
@@ -30,6 +35,7 @@
   # environment.
   home.packages = [
     pkgs.gh
+    pkgs.tailscale
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
