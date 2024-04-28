@@ -29,6 +29,10 @@
   };
 
   dconf.settings = {
+    "org/gnome/shell/extensions/ding" = {
+      show-home = false;
+    };
+
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       gtk-theme = "Yaru-sage-dark";
@@ -36,10 +40,10 @@
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
-      show-mounts = "false";
-      show-trash = "false";
+      show-mounts = false;
+      show-trash = false;
       dash-max-icon-size = 24;
-      show-show-apps-button = "false";
+      show-show-apps-button = false;
       favorite-apps = [];
     };
 
@@ -51,7 +55,6 @@
         "__temperature_avg__"
       ];
     };
-
   };
 
   # The home.packages option allows you to install Nix packages into your
