@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of veymax";
+  description = "Home Manager configuration for veymax";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
