@@ -43,6 +43,15 @@
       favorite-apps = [];
     };
 
+    "org/gnome/shell/extensions/vitals" = {
+      hot-sensors = [
+        "_memory_usage_"
+        "_system_load_1m_"
+        "__network-rx_max__"
+        "__temperature_avg__"
+      ];
+    };
+
   };
 
   # The home.packages option allows you to install Nix packages into your
