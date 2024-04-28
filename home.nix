@@ -38,8 +38,11 @@
     "org/gnome/shell/extensions/dash-to-dock" = {
       show-mounts = "false";
       show-trash = "false";
+      dash-max-icon-size = 24;
+      show-show-apps-button = "false";
+      favorite-apps = [];
     };
-    # "org/gnome/shell/enabled-extensions" = "['ding@rastersoft.com', 'ubuntu-dock@ubuntu.com', 'tiling-assistant@ubuntu.com', 'dash-to-dock@micxgx.gmail.com']";
+
   };
 
   # The home.packages option allows you to install Nix packages into your
@@ -49,6 +52,9 @@
     pkgs.tailscale
     pkgs.gnome.gnome-tweaks
     pkgs.sl
+    pkgs.gnomeExtensions.openweather
+    pkgs.gnomeExtensions.vitals
+    pkgs.gnomeExtensions.dash-to-dock
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
