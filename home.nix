@@ -6,6 +6,8 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  nixpkgs.config.allowUnfree = true;
+
   nix = {
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];
