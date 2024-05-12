@@ -19,7 +19,7 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    extraConfig = ''set tabstop=2 expandtab shiftwidth=2 nocompatible'';
+    extraConfig = ''set tabstop=2 expandtab shiftwidth=2 nocompatible clipboard+=unnamedplus'';
   };
 
   programs.git = {
@@ -30,7 +30,12 @@
     userName = "MaximUltimatum";
   };
 
+  # run: `dconf watch /` to find these
   dconf.settings = {
+    "org/gnome/mutter" = {
+      workspaces-only-on-primary = false;
+    };
+
     "org/gnome/shell/extensions/ding" = {
       show-home = false;
     };
@@ -69,6 +74,7 @@
     pkgs.gnomeExtensions.openweather
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.dash-to-dock
+    pkgs.xclip
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
