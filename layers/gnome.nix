@@ -1,4 +1,29 @@
 { config, pkgs, ... }:
+let
+  vitals = pkgs.stdenv.mkDerivation rec {
+    pname = "vitals-gnome-42";
+    version = "v61.0.1";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "corecoding";
+      repo = "Vitals";
+      rev = "v61.0.1";
+      sha256 = "sha256-aZLco45lo8lAps4PGV6MIco+r6ZVIvI4wPqt0dhvOp0=";
+    };
+
+    buildInputs = [ /* dependencies */ ];
+
+    installPhase = ''
+      mkdir -p $out/bin
+      cp -r * $out/bin/
+    '';
+
+    meta = {
+      description = "This is a one stop shop to monitor all of your vital sensors";
+      homepage = "https://github.com/corecoding/Vitals";
+    };
+  };
+in
 {
   # run: `dconf watch /` to find these
   dconf.settings = {
@@ -52,6 +77,8 @@
     
     # Version is too new
     # pkgs.gnomeExtensions.openweather
+
+    vitals
     # pkgs.gnomeExtensions.vitals
     # pkgs.gnomeExtensions.dash-to-dock
   ];
