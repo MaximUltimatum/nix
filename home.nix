@@ -13,7 +13,6 @@
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
 
-
   imports = [
     ./layers/gnome.nix
     ./layers/development.nix
