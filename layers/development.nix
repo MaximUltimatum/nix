@@ -18,9 +18,8 @@
     ];
     hooks = {}; # we should add a code formatter later
     # It is safe to commit the KEY ID to git. Just not the private key
-    # signing.key = "";
-    signing.signByDefault = true;
-    signing.key = "1DE0258EDEA3687C02B410000E5996F02A636F3E";
+    # signing.signByDefault = true;
+    # signing.key = "142DB6DC193A51B4864C897629E74C433268C88E";
     userEmail = "mcder018@live.com";
     userName = "MaximUltimatum";
     difftastic.enable = true;
@@ -46,6 +45,8 @@
     pkgs.gh
     pkgs.xclip
     pkgs.jetbrains-toolbox
+    pkgs.kubectl
+    pkgs.kubectx
     
     (pkgs.writeShellScriptBin "fix-pinentry" ''
       pkill -f gpg-agent; pkill -f pinentry
