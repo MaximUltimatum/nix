@@ -25,8 +25,6 @@
     pkgs.zoom-us
 
     pkgs.sl # i like trains
-
-    pkgs.element-desktop # to ask nix chat what i'm doing wrong
   ];
 
   home.file = {
@@ -34,6 +32,7 @@
     ".ideavimrc".text = ''
       Plug 'preservim/nerdtree'
       map <C-f> :NERDTreeFocus<CR>
+      set clipboard+=unnamedplus
     '';
   };
 
