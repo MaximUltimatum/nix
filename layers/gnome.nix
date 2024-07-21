@@ -1,15 +1,4 @@
 { config, pkgs, ... }:
-let
-  vitals = pkgs.gnomeExtensions.vitals.overrideAttrs (oldAttrs: rec {
-    version = "v61.0.1";
-    src = pkgs.fetchFromGitHub {
-      owner = "corecoding";
-      repo = "Vitals";
-      rev = "v61.0.1";
-      sha256 = "sha256-aZLco45lo8lAps4PGV6MIco+r6ZVIvI4wPqt0dhvOp0=";
-    };
-  });
-in
 {
   # run: `dconf watch /` to find these
   dconf.settings = {
@@ -60,12 +49,8 @@ in
   home.packages = [
     pkgs.gnome.gnome-tweaks
     pkgs.gnome-extension-manager
-    
-    # Version is too new
-    # pkgs.gnomeExtensions.openweather
 
-    vitals
-    # pkgs.gnomeExtensions.vitals
-    # pkgs.gnomeExtensions.dash-to-dock
+    pkgs.gnomeExtensions.vitals
+    pkgs.gnomeExtensions.dash-to-dock
   ];
 }

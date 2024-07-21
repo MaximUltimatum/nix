@@ -53,4 +53,14 @@
       systemctl --user restart gpg-agent{.socket,-extra.socket,-ssh.socket}
     '')
   ];
+
+  home.file = {
+    # See https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+    ".ideavimrc".text = ''
+      Plug 'preservim/nerdtree'
+      map <C-f> :NERDTreeFocus<CR>
+      set clipboard+=unnamedplus
+    '';
+  };
+
 }
