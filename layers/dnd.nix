@@ -5,6 +5,7 @@
     pkgs.google-chrome
     pkgs.obsidian
     pkgs.zoom-us
+    pkgs.nextcloud-client
   ];
   
   # Add to bashrc if home-manager isn't managing shell:

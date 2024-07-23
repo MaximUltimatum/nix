@@ -10,8 +10,8 @@
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      gtk-theme = "Yaru-sage-dark";
-      icon-theme = "Yaru-sage";
+      gtk-theme = "Adwaita";
+      icon-theme = "Adwaita";
       enable-hot-corners = false;
     };
     "org/gnome/desktop/peripherals/touchpad" = {

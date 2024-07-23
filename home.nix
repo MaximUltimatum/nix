@@ -16,6 +16,7 @@
 
   home.packages = [
     pkgs.sl # i like trains
+    pkgs.signal-desktop
   ];
 
   # Let Home Manager install and manage itself.
