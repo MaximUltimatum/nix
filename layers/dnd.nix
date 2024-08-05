@@ -6,6 +6,7 @@
     pkgs.obsidian
     pkgs.zoom-us
     pkgs.nextcloud-client
+    pkgs.discord
   ];
   
   # Add to bashrc if home-manager isn't managing shell:

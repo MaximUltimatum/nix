@@ -17,6 +17,8 @@
   home.packages = [
     pkgs.sl # i like trains
     pkgs.signal-desktop
+    pkgs.unzip
+    pkgs.super-productivity
   ];
 
   # Let Home Manager install and manage itself.
