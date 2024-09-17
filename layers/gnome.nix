@@ -49,6 +49,7 @@
   home.packages = [
     pkgs.gnome.gnome-tweaks
     pkgs.gnome-extension-manager
+    pkgs.gnomeExtensions.wallpaper-slideshow
 
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.dash-to-dock
