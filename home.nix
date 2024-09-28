@@ -1,8 +1,9 @@
 { config, pkgs, ... }:
 
+
 {
-  home.username = "veymax";
-  home.homeDirectory = "/home/veymax";
+  home.username = "makaison";
+  home.homeDirectory = "/home/makaison";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
@@ -14,10 +15,12 @@
     ./layers/dnd.nix
   ];
 
+  programs.spotify-player.enable = true;
+
   home.packages = [
     pkgs.sl # i like trains
-    pkgs.signal-desktop
     pkgs.unzip
+    pkgs.signal-desktop
     pkgs.super-productivity
   ];
 
