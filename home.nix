@@ -22,6 +22,8 @@
     pkgs.unzip
     pkgs.signal-desktop
     pkgs.super-productivity
+    pkgs.spotify
+    pkgs.element-desktop
   ];
 
   # Let Home Manager install and manage itself.

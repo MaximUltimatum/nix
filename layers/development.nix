@@ -47,10 +47,16 @@
     pkgs.jetbrains-toolbox
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.kubeseal
+    pkgs.argocd
+    pkgs.jq
     
     (pkgs.writeShellScriptBin "fix-pinentry" ''
       pkill -f gpg-agent; pkill -f pinentry
       systemctl --user restart gpg-agent{.socket,-extra.socket,-ssh.socket}
+    '')
+    (pkgs.writeShellScriptBin "minio-login" ''
+      kubectl get secret/console-sa-secret -n backups -o json | jq -r ".data.token" | base64 -d
     '')
   ];
 
