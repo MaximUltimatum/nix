@@ -18,8 +18,8 @@
     ];
     hooks = {}; # we should add a code formatter later
     # It is safe to commit the KEY ID to git. Just not the private key
-    # signing.signByDefault = true;
-    # signing.key = "142DB6DC193A51B4864C897629E74C433268C88E";
+    signing.signByDefault = true;
+    signing.key = "D3AFB8819B14AEBC5125DAB472008A345C7958C1";
     userEmail = "mcder018@live.com";
     userName = "MaximUltimatum";
     difftastic.enable = true;
@@ -43,6 +43,7 @@
 
   home.packages = [
     pkgs.gh
+    pkgs.gnupg
     pkgs.xclip
     pkgs.jetbrains-toolbox
     pkgs.kubectl
