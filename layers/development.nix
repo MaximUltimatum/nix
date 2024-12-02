@@ -45,13 +45,19 @@
     pkgs.gh
     pkgs.gnupg
     pkgs.xclip
+    
     pkgs.jetbrains-toolbox
+
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubeseal
     pkgs.argocd
     pkgs.jq
-    
+
+    pkgs.nodejs_22
+    pkgs.pnpm
+   
+    # And run `export GPG_TTY=$(tty)` or figure out how to add this to the end of the .bashrc file
     (pkgs.writeShellScriptBin "fix-pinentry" ''
       pkill -f gpg-agent; pkill -f pinentry
       systemctl --user restart gpg-agent{.socket,-extra.socket,-ssh.socket}
