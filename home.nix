@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 
-
 {
   home.username = "makaison";
   home.homeDirectory = "/home/makaison";
@@ -13,6 +12,7 @@
     ./layers/gnome.nix
     ./layers/development.nix
     ./layers/dnd.nix
+    ./layers/shell.nix
   ];
 
   programs.spotify-player.enable = true;
@@ -22,7 +22,6 @@
     pkgs.unzip
     pkgs.signal-desktop
     pkgs.super-productivity
-    pkgs.spotify
     pkgs.element-desktop
   ];
 

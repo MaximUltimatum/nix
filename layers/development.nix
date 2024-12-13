@@ -45,7 +45,7 @@
     pkgs.gh
     pkgs.gnupg
     pkgs.xclip
-    
+
     pkgs.jetbrains-toolbox
 
     pkgs.kubectl
@@ -56,6 +56,8 @@
 
     pkgs.nodejs_22
     pkgs.pnpm
+
+    pkgs.go
    
     # And run `export GPG_TTY=$(tty)` or figure out how to add this to the end of the .bashrc file
     (pkgs.writeShellScriptBin "fix-pinentry" ''
