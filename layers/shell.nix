@@ -10,6 +10,7 @@
             expireDuplicatesFirst = true;
             ignoreAllDups = true;
         };
+        envExtra = "bindkey '^ ' autosuggest-accept";
         oh-my-zsh = {
             enable = true;
             theme = "refined";
