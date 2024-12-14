@@ -16,5 +16,7 @@
             theme = "refined";
         };
     };
-
+  home.packages = [
+    pkgs.tmate
+  ];
 }
