@@ -13,6 +13,7 @@
     ./layers/development.nix
     ./layers/dnd.nix
     ./layers/shell.nix
+    ./layers/gaming.nix
   ];
 
   programs.spotify-player.enable = true;
@@ -21,7 +22,6 @@
     pkgs.sl # i like trains
     pkgs.unzip
     pkgs.signal-desktop
-    pkgs.super-productivity
     pkgs.element-desktop
   ];
 
