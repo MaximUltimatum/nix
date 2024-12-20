@@ -50,6 +50,7 @@
 
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.kubectl-view-secret
     pkgs.kubeseal
     pkgs.argocd
     pkgs.jq

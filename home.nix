@@ -1,8 +1,13 @@
-{ config, pkgs, ... }:
+{ 
+  config,
+  pkgs,
+  #kubectl-flake,
+  ... 
+}:
 
 {
-  home.username = "makaison";
-  home.homeDirectory = "/home/makaison";
+  home.username = "veymax";
+  home.homeDirectory = "/home/veymax";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
@@ -18,7 +23,12 @@
 
   programs.spotify-player.enable = true;
 
+  services.trayscale.enable = true;
+
   home.packages = [
+    #kubectl-flake.packages.${pkgs.system}.default
+    pkgs.yt-dlp
+
     pkgs.sl # i like trains
     pkgs.unzip
     pkgs.signal-desktop
