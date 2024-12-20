@@ -19,6 +19,7 @@
     ./layers/dnd.nix
     ./layers/shell.nix
     ./layers/gaming.nix
+    ./layers/audio.nix
   ];
 
   programs.spotify-player.enable = true;
@@ -28,6 +29,7 @@
   home.packages = [
     #kubectl-flake.packages.${pkgs.system}.default
     pkgs.yt-dlp
+    pkgs.audacity
 
     pkgs.sl # i like trains
     pkgs.unzip
