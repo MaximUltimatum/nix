@@ -1,0 +1,1 @@
+/home/parker/home-manager/nixconfig/configuration.nix
