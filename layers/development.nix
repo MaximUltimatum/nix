@@ -69,6 +69,18 @@
     (pkgs.writeShellScriptBin "minio-login" ''
       kubectl get secret/console-sa-secret -n backups -o json | jq -r ".data.token" | base64 -d
     '')
+    (pkgs.writeShellScriptBin "gs" ''
+      git status
+    '')
+    (pkgs.writeShellScriptBin "gc" ''
+      git commit -m $1
+    '')
+    (pkgs.writeShellScriptBin "gp" ''
+      git pull origin $1 --rebase
+    '')
+    (pkgs.writeShellScriptBin "hms" ''
+      home-manager switch
+    '')
   ];
 
   home.file = {
