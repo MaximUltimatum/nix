@@ -56,9 +56,10 @@
     pkgs.jq
 
     pkgs.nodejs_22
-    pkgs.pnpm
 
     pkgs.go
+
+    pkgs.tmate
    
     # And run `export GPG_TTY=$(tty)` or figure out how to add this to the end of the .bashrc file
     (pkgs.writeShellScriptBin "fix-pinentry" ''
