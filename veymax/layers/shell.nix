@@ -18,5 +18,6 @@
     };
   home.packages = [
     pkgs.tmate
+    pkgs.just
   ];
 }
