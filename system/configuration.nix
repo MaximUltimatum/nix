@@ -11,6 +11,7 @@
       ./default/hardware-configuration.nix
       ./layers/development.nix
       ./layers/systemshell.nix
+      ./layers/starcitizen.nix
       <home-manager/nixos>
     ];
   
