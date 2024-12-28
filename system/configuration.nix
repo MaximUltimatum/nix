@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -11,7 +11,9 @@
       ./default/hardware-configuration.nix
       ./layers/development.nix
       ./layers/systemshell.nix
-      ./layers/starcitizen.nix
+      #./layers/starcitizen.nix
+      ./layers/starcitizen-flake.nix
+      ./layers/enable-flakes.nix
       <home-manager/nixos>
     ];
   
