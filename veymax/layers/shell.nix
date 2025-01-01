@@ -19,5 +19,7 @@
   home.packages = [
     pkgs.tmate
     pkgs.just
+    pkgs.sl # i like trains
+    pkgs.unzip
   ];
 }

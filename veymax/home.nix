@@ -20,6 +20,8 @@
     ./layers/shell.nix
     ./layers/gaming.nix
     ./layers/audio.nix
+    ./layers/catt.nix
+    ./layers/chat.nix
   ];
 
   programs.spotify-player.enable = true;
@@ -28,13 +30,6 @@
 
   home.packages = [
     #kubectl-flake.packages.${pkgs.system}.default
-    pkgs.yt-dlp
-    pkgs.audacity
-
-    pkgs.sl # i like trains
-    pkgs.unzip
-    pkgs.signal-desktop
-    pkgs.element-desktop
   ];
 
   # Let Home Manager install and manage itself.
