@@ -22,11 +22,10 @@
     ./layers/audio.nix
     ./layers/catt.nix
     ./layers/chat.nix
+    #./layers/starcitizen-flake.nix
   ];
 
   programs.spotify-player.enable = true;
-
-  services.trayscale.enable = true;
 
   home.packages = [
     #kubectl-flake.packages.${pkgs.system}.default
