@@ -1,5 +1,6 @@
 { config, pkgs, inputs, ... }: 
 {
+  # NOTE - this may be worth trying on NixOS, but the experience is difficult to work with on non-nixos. Use the LUG-helper instead
   # NixOS configuration for Star Citizen requirements
   boot.kernel.sysctl = {
     "vm.max_map_count" = 16777216;

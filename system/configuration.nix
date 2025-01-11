@@ -11,8 +11,7 @@
       ./default/hardware-configuration.nix
       ./layers/development.nix
       ./layers/systemshell.nix
-      #./layers/starcitizen.nix
-      ./layers/starcitizen-flake.nix
+      #./layers/starcitizen-flake.nix
       ./layers/enable-flakes.nix
       <home-manager/nixos>
     ];
