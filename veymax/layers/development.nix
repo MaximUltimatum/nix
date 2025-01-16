@@ -41,16 +41,22 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
+  programs.kubecolor = {
+    enable = true;
+    enableAlias = true;
+  };
+
   home.packages = [
     pkgs.gh
     pkgs.gnupg
     pkgs.xclip
 
-    pkgs.jetbrains-toolbox
+    # pkgs.jetbrains-toolbox # this is fucky on standalone non-nixos
 
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubectl-view-secret
+    pkgs.k9s
     pkgs.kubeseal
     pkgs.argocd
     pkgs.jq

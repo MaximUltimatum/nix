@@ -29,6 +29,7 @@
 
   home.packages = [
     #kubectl-flake.packages.${pkgs.system}.default
+    pkgs.vesktop
   ];
 
   # Let Home Manager install and manage itself.
