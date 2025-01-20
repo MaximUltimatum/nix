@@ -4,7 +4,7 @@
     # DnD
     pkgs.google-chrome
     pkgs.obsidian
-    pkgs.nextcloud-client
+    #pkgs.nextcloud-client
   ];
   
   # Add to bashrc if home-manager isn't managing shell:
