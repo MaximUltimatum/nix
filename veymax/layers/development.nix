@@ -53,6 +53,7 @@
 
     # pkgs.jetbrains-toolbox # this is fucky on standalone non-nixos
 
+    # k8s
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubectl-view-secret
@@ -61,10 +62,12 @@
     pkgs.argocd
     pkgs.jq
 
+    # random languages I work with
     pkgs.nodejs_22
-
     pkgs.go
+    pkgs.python3
 
+    # lifesaver and really cool
     pkgs.tmate
    
     # And run `export GPG_TTY=$(tty)` or figure out how to add this to the end of the .bashrc file

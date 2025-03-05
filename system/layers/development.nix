@@ -6,4 +6,7 @@
     enableOnBoot = true;
   };
   users.extraGroups.docker.members = [ "makaison" ];
+  environment.systemPackages = [ # or home.packages
+    pkgs.jetbrains-toolbox # this is fucky on standalone non-nixos
+  ];
 }

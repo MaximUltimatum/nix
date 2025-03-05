@@ -30,6 +30,7 @@
   home.packages = [
     #kubectl-flake.packages.${pkgs.system}.default
     pkgs.vesktop
+    pkgs.mumble
   ];
 
   # Let Home Manager install and manage itself.
