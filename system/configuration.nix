@@ -10,6 +10,7 @@
       ./default/default-configuration.nix
       ./default/hardware-configuration.nix
       ./layers/development.nix
+      ./layers/office.nix
       ./layers/systemshell.nix
       #./layers/starcitizen-flake.nix
       ./layers/enable-flakes.nix
