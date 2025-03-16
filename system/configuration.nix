@@ -21,4 +21,11 @@
     home.stateVersion = "24.11";
     imports = [ ../veymax/home.nix ];
   };
+
+  # For printing
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 }

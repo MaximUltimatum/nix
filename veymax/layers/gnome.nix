@@ -19,9 +19,7 @@
     };
     "org/gnome/settings-daemon/plugins/power" = {
       ambient-enabled = false;
-    };
-    "org/gnome/settings-daemon/plugins/power" = {
-      idle-dim = true;
+      idle-dim = false;
     };
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = true;
