@@ -52,6 +52,7 @@
     pkgs.xclip
 
     # pkgs.jetbrains-toolbox # this is fucky on standalone non-nixos
+    pkgs.zed-editor
 
     # k8s
     pkgs.kubectl
