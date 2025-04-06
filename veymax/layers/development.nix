@@ -91,6 +91,9 @@
     (pkgs.writeShellScriptBin "hms" ''
       home-manager switch
     '')
+    (pkgs.writeShellScriptBin "rebuild" ''
+      sudo nixos-rebuild switch --flake /home/veymax/nix/system --impure
+    '')
   ];
 
   home.file = {
