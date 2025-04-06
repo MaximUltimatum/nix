@@ -4,6 +4,7 @@
     # DnD
     pkgs.google-chrome
     pkgs.obsidian
+    pkgs.gimp
     #pkgs.nextcloud-client
   ];
   
