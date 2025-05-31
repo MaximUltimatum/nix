@@ -2,7 +2,7 @@
   config,
   pkgs,
   #kubectl-flake,
-  ... 
+  ...
 }:
 
 {
@@ -17,12 +17,11 @@
     ./layers/gnome.nix
     ./layers/development.nix
     ./layers/dnd.nix
-    ./layers/shell.nix
+    ./layers/terminal.nix
     ./layers/gaming.nix
     ./layers/audio.nix
     ./layers/catt.nix
     ./layers/chat.nix
-    #./layers/starcitizen-flake.nix
   ];
 
   programs.spotify-player.enable = true;

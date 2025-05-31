@@ -5,7 +5,6 @@
     pkgs.google-chrome
     pkgs.obsidian
     pkgs.gimp
-    #pkgs.nextcloud-client
   ];
   
   # Add to bashrc if home-manager isn't managing shell:
