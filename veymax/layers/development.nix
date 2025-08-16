@@ -46,40 +46,41 @@
     enableAlias = true;
   };
 
-  home.packages = [
-    pkgs.gh
-    pkgs.gnupg
-    pkgs.xclip
+  home.packages = with pkgs; [
+    gh
+    gnupg
+    xclip
 
     # k8s
-    pkgs.kubectl
-    pkgs.kubectx
-    pkgs.kubectl-view-secret
-    pkgs.k9s
-    pkgs.kubeseal
-    pkgs.argocd
-    pkgs.jq
+    kubectl
+    kubectx
+    kubectl-view-secret
+    k9s
+    kubeseal
+    argocd
+    jq
+    talosctl
 
     # random languages I work with
-    pkgs.nodejs_22
-    pkgs.go
-    pkgs.python3
+    nodejs_22
+    go
+    python3
 
     # lifesaver and really cool
-    pkgs.tmate
+    tmate
    
     # And run `export GPG_TTY=$(tty)` or figure out how to add this to the end of the .bashrc file
-    (pkgs.writeShellScriptBin "fix-pinentry" ''
+    (writeShellScriptBin "fix-pinentry" ''
       pkill -f gpg-agent; pkill -f pinentry
       systemctl --user restart gpg-agent{.socket,-extra.socket,-ssh.socket}
     '')
-    (pkgs.writeShellScriptBin "minio-login" ''
+    (writeShellScriptBin "minio-login" ''
       kubectl get secret/console-sa-secret -n backups -o json | jq -r ".data.token" | base64 -d
     '')
-    (pkgs.writeShellScriptBin "hms" ''
+    (writeShellScriptBin "hms" ''
       home-manager switch
     '')
-    (pkgs.writeShellScriptBin "rebuild" ''
+    (writeShellScriptBin "rebuild" ''
       sudo nixos-rebuild switch --flake /home/veymax/nix/system --impure
     '')
   ];

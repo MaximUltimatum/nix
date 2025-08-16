@@ -11,14 +11,14 @@
   # doesn't work on non-Nixos systems, install manually and use the config below
   programs.alacritty.enable = true;
 
-  home.packages = [
-    pkgs.sl # i like trains
-    pkgs.cbonsai # inner peace through ascii
-    pkgs.nms #sneakers decryption
-    pkgs.cmatrix # terminal screensaver
-    pkgs.wl-clipboard # for tmux copying
+  home.packages = with pkgs; [
+    sl # i like trains
+    cbonsai # inner peace through ascii
+    nms #sneakers decryption
+    cmatrix # terminal screensaver
+    wl-clipboard # for tmux copying
 
-    (pkgs.writeShellScriptBin "colors" ''
+    (writeShellScriptBin "colors" ''
       wallust run "$(gsettings get org.gnome.desktop.background picture-uri | sed "s/^'file:\/\///" | sed "s/'$//")" --palette ansidark
     '')
   ];

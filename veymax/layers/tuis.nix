@@ -19,41 +19,41 @@
     '';
   };
 
-  home.packages = [
+  home.packages = with pkgs; [
     # Dev Tool Tuis
-    (pkgs.writeShellScriptBin "jo" ''
+    (writeShellScriptBin "jo" ''
       #!/bin/bash
       joshuto
     '')
-    pkgs.lazygit # excellent git tui
-    (pkgs.writeShellScriptBin "lg" ''
+    lazygit # excellent git tui
+    (writeShellScriptBin "lg" ''
       #!/bin/bash
       lazygit
     '')
-    pkgs.lazydocker # docker tui
-    pkgs.lazyjournal # tui for journalctl
-    pkgs.systemctl-tui # tui for systemd
-    pkgs.jqp # rexex cookbook but jq
-    pkgs.posting # tui api client
+    lazydocker # docker tui
+    lazyjournal # tui for journalctl
+    systemctl-tui # tui for systemd
+    jqp # rexex cookbook but jq
+    posting # tui api client
 
     # Databases
-    pkgs.rainfrog # manage databases with a tui
+    rainfrog # manage databases with a tui
 
     # System info
-    pkgs.neofetch # pretty system information
-    pkgs.cpufetch # pretty cpu info
-    pkgs.cyme # usb bus info
+    neofetch # pretty system information
+    cpufetch # pretty cpu info
+    cyme # usb bus info
 
     # Monitoring
-    pkgs.btop # prettier system resources
-    pkgs.netop # cool bpf utility to monitor network traffic
+    btop # prettier system resources
+    netop # cool bpf utility to monitor network traffic
 
     # System admin
-    pkgs.pik # interactive process killer
-    pkgs.dua # disk usage analyzer
+    pik # interactive process killer
+    dua # disk usage analyzer
 
     # Working with files
-    pkgs.tdf # terminal pdf viewer
+    tdf # terminal pdf viewer
 
     # Network
     # pkgs.asn # investigate ip addresses # need token
