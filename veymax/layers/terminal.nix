@@ -17,6 +17,7 @@
     nms #sneakers decryption
     cmatrix # terminal screensaver
     wl-clipboard # for tmux copying
+    tmux
 
     (writeShellScriptBin "colors" ''
       wallust run "$(gsettings get org.gnome.desktop.background picture-uri | sed "s/^'file:\/\///" | sed "s/'$//")" --palette ansidark
