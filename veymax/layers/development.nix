@@ -38,7 +38,7 @@
     enableBashIntegration = true;
     enableSshSupport = true;
     defaultCacheTtl = 34560000;
-    pinentryPackage = pkgs.pinentry-curses;
+    pinentry.package = pkgs.pinentry-curses;
   };
 
   programs.kubecolor = {
@@ -75,15 +75,6 @@
     '')
     (pkgs.writeShellScriptBin "minio-login" ''
       kubectl get secret/console-sa-secret -n backups -o json | jq -r ".data.token" | base64 -d
-    '')
-    (pkgs.writeShellScriptBin "gs" ''
-      git status
-    '')
-    (pkgs.writeShellScriptBin "gc" ''
-      git commit -m $1
-    '')
-    (pkgs.writeShellScriptBin "gp" ''
-      git pull origin $1 --rebase
     '')
     (pkgs.writeShellScriptBin "hms" ''
       home-manager switch

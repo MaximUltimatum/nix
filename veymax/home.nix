@@ -22,6 +22,7 @@
     ./layers/audio.nix
     ./layers/catt.nix
     ./layers/chat.nix
+    ./layers/tuis.nix
   ];
 
   programs.spotify-player.enable = true;
