@@ -6,22 +6,18 @@
 }:
 
 {
-  home.username = "veymax";
-  home.homeDirectory = "/home/veymax";
+  home.username = "root";
+  home.homeDirectory = "/root";
 
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./layers/gnome.nix
     ./layers/development.nix
-    ./layers/dnd.nix
     ./layers/terminal.nix
-    ./layers/gaming.nix
     ./layers/audio.nix
     ./layers/catt.nix
-    ./layers/chat.nix
     ./layers/tuis.nix
   ];
 
@@ -29,8 +25,8 @@
 
   home.packages = [
     #kubectl-flake.packages.${pkgs.system}.default
-    pkgs.vesktop
-    pkgs.mumble
+    #pkgs.vesktop
+    #pkgs.mumble
   ];
 
   # Let Home Manager install and manage itself.
