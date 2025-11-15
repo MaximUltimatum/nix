@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    #feishin
+  ];
+
   home.file.".config/hypr/bindings.conf" = {
     text = ''
       # EXISTING OMARCHY CONFIG
@@ -17,7 +21,6 @@
       bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus "^obsidian$" "uwsm-app -- obsidian -disable-gpu --enable-wayland-ime"
 
       # If your web app url contains #, type it as ## to prevent hyprland treating it as a comment
-      bindd = SUPER SHIFT, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/" # TODO Jellyfin
       bindd = SUPER SHIFT CTRL, G, Google Messages, exec, omarchy-launch-or-focus-webapp "Google Messages" "https://messages.google.com/web/conversations" # TODO setup
 
       # Tweaked
@@ -30,7 +33,9 @@
       bindd = SUPER SHIFT, I, Immich, exec, omarchy-launch-or-focus-webapp "Immich" "https://photos.maximstroud.de/"
       bindd = SUPER SHIFT, S, Signal, exec, omarchy-launch-or-focus signal "uwsm-app -- signal-desktop"
       bindd = SUPER SHIFT, C, Calendar, exec, omarchy-launch-webapp "https://calendar.proton.me/"
+      bindd = SUPER SHIFT, J, Jellyfin, exec, omarchy-launch-webapp "https://videos.kingfisher-halfmoon.ts.net/"
       bindd = SUPER SHIFT, E, Email, exec, omarchy-launch-webapp "https://mail.proton.me/"
+      bindd = SUPER SHIFT, R, Recipes, exec, omarchy-launch-webapp "https://recipes.maximstroud.de/"
 
       # MY EDITS:
       unbind = SUPER, K
@@ -102,9 +107,6 @@
       input {
         kb_options = compose:caps,altwin:swap_alt_win
       }
-    '';
-    onChange = ''
-      hyperctl reload
     '';
   };
 }
