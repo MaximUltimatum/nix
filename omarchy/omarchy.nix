@@ -14,22 +14,23 @@
       bindd = SUPER SHIFT ALT, B, Browser (private), exec, $browser --private
       bindd = SUPER SHIFT, M, Music, exec, omarchy-launch-or-focus spotify
       bindd = SUPER SHIFT, N, Editor, exec, omarchy-launch-editor
-      bindd = SUPER SHIFT, T, Activity, exec, $terminal -e btop
       bindd = SUPER SHIFT, G, Signal, exec, omarchy-launch-or-focus signal "uwsm-app -- signal-desktop"
       bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus "^obsidian$" "uwsm-app -- obsidian -disable-gpu --enable-wayland-ime"
       bindd = SUPER SHIFT, W, Typora, exec, uwsm-app -- typora --enable-wayland-ime
       bindd = SUPER SHIFT, SLASH, Passwords, exec, uwsm-app -- bitwarden-desktop # modified from 1password
 
       # If your web app url contains #, type it as ## to prevent hyprland treating it as a comment
-      bindd = SUPER SHIFT, A, ChatGPT, exec, omarchy-launch-webapp "https://chatgpt.com" # TODO opencode
+      #bindd = SUPER SHIFT, A, ChatGPT, exec, omarchy-launch-webapp "https://chatgpt.com" # TODO opencode
       bindd = SUPER SHIFT, C, Calendar, exec, omarchy-launch-webapp "https://app.hey.com/calendar/weeks/" # TODO proton calendar
       bindd = SUPER SHIFT, E, Email, exec, omarchy-launch-webapp "https://app.hey.com" # TODO protonmail
       bindd = SUPER SHIFT, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/" # TODO Jellyfin
       bindd = SUPER SHIFT CTRL, G, Google Messages, exec, omarchy-launch-or-focus-webapp "Google Messages" "https://messages.google.com/web/conversations" # TODO setup
-      bindd = SUPER SHIFT, P, Google Photos, exec, omarchy-launch-or-focus-webapp "Google Photos" "https://photos.google.com/" # TODO immich
 
       bindd = SUPER SHIFT, D, Discord, exec, discord
       bindd = SUPER SHIFT, L, Docker, exec, $terminal -e lazydocker
+      bindd = SUPER SHIFT, T, Tasks, exec, omarchy-launch-or-focus-webapp "Vikunja" "https://tasks.maximstroud.de"
+      bindd = SUPER SHIFT, A, Activity, exec, $terminal -e btop
+      bindd = SUPER SHIFT, I, Immich, exec, omarchy-launch-or-focus-webapp "Immich" "https://photos.maximstroud.de/"
 
       # MY EDITS:
       unbind = SUPER, K
