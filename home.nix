@@ -8,6 +8,14 @@
 
   imports = [
     ./omarchy/omarchy.nix
+    ./development/dev.nix
+    ./development/terminal.nix
+  ];
+  
+  home.packages = with pkgs; [
+    (writeShellScriptBin "hms" ''
+      home-manager switch $@
+    '')
   ];
 
 
