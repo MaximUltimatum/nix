@@ -33,8 +33,8 @@
       # Overwrite existing bindings, like putting Omarchy Menu on Super + Space
       # unbind = SUPER, SPACE
       # bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu
-      unbind = SUPER, k
-      unbind = SUPER, j
+      unbind = SUPER, K
+      unbind = SUPER, J
 
       # MY EDITS:
 
@@ -103,6 +103,9 @@
       input {
         kb_options = compose:caps,altwin:swap_alt_win
       }
+    '';
+    onChange = ''
+      hyperctl reload
     '';
   };
 }
