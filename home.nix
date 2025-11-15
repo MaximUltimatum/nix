@@ -10,6 +10,7 @@
     ./omarchy/omarchy.nix
     ./development/dev.nix
     ./development/terminal.nix
+    ./omarchy/jrnl.nix
   ];
   
   home.packages = with pkgs; [
