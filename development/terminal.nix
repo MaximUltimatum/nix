@@ -8,6 +8,7 @@
     cmatrix # terminal screensaver
     wl-clipboard # for tmux copying
     tmux
+    jrnl
   ];
 
   home.file = {

@@ -27,7 +27,7 @@
       bindd = SUPER SHIFT, X, ChatGPT, exec, omarchy-launch-webapp "https://claude.ai" # TODO opencode
       bindd = SUPER SHIFT, SLASH, Passwords, exec, uwsm-app -- bitwarden-desktop
       bindd = SUPER SHIFT, D, Discord, exec, discord
-      bindd = SUPER SHIFT, L, Docker, exec, $terminal -e lazydocker
+      bindd = SUPER SHIFT, O, Docker, exec, $terminal -e lazydocker
       bindd = SUPER SHIFT, T, Tasks, exec, omarchy-launch-or-focus-webapp "Vikunja" "https://tasks.maximstroud.de"
       bindd = SUPER SHIFT, A, Activity, exec, $terminal -e btop
       bindd = SUPER SHIFT, I, Immich, exec, omarchy-launch-or-focus-webapp "Immich" "https://photos.maximstroud.de/"
@@ -41,6 +41,7 @@
       unbind = SUPER, K
       unbind = SUPER, J
       bindd = SUPER, U, Show key bindings, exec, omarchy-menu-keybindings
+      bindd = SUPER, Y, Toggle vertical/horizaontal split, togglesplit
 
       # Vim-like window navigation (replacing arrow keys)
       bind = SUPER, h, movefocus, l
