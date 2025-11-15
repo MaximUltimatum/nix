@@ -15,7 +15,6 @@
       bindd = SUPER SHIFT, M, Music, exec, omarchy-launch-or-focus spotify
       bindd = SUPER SHIFT, N, Editor, exec, omarchy-launch-editor
       bindd = SUPER SHIFT, T, Activity, exec, $terminal -e btop
-      bindd = SUPER SHIFT, D, Docker, exec, $terminal -e lazydocker
       bindd = SUPER SHIFT, G, Signal, exec, omarchy-launch-or-focus signal "uwsm-app -- signal-desktop"
       bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus "^obsidian$" "uwsm-app -- obsidian -disable-gpu --enable-wayland-ime"
       bindd = SUPER SHIFT, W, Typora, exec, uwsm-app -- typora --enable-wayland-ime
@@ -28,15 +27,14 @@
       bindd = SUPER SHIFT, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/" # TODO Jellyfin
       bindd = SUPER SHIFT CTRL, G, Google Messages, exec, omarchy-launch-or-focus-webapp "Google Messages" "https://messages.google.com/web/conversations" # TODO setup
       bindd = SUPER SHIFT, P, Google Photos, exec, omarchy-launch-or-focus-webapp "Google Photos" "https://photos.google.com/" # TODO immich
-      bindd = SUPER SHIFT, X, X, exec, omarchy-launch-webapp "https://x.com/" # TODO discord
 
-      # Overwrite existing bindings, like putting Omarchy Menu on Super + Space
-      # unbind = SUPER, SPACE
-      # bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu
-      unbind = SUPER, K
-      unbind = SUPER, J
+      bindd = SUPER SHIFT, D, Discord, exec, discord
+      bindd = SUPER SHIFT, L, Docker, exec, $terminal -e lazydocker
 
       # MY EDITS:
+      unbind = SUPER, K
+      unbind = SUPER, J
+      bindd = SUPER, U, Show key bindings, exec, omarchy-menu-keybindings
 
       # Vim-like window navigation (replacing arrow keys)
       bind = SUPER, h, movefocus, l
