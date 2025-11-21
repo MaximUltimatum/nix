@@ -13,9 +13,13 @@
     k9s
     kubeseal
     talosctl
+    kubernetes-helm
 
     # work with your friends
     tmate
+
+    # AI! AI! AI! AI!
+    opencode
     
     (writeShellScriptBin "vim" ''
       nvim $@

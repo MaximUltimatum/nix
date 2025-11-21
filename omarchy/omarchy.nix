@@ -33,7 +33,7 @@
       bindd = SUPER SHIFT, I, Immich, exec, omarchy-launch-or-focus-webapp "Immich" "https://photos.maximstroud.de/"
       bindd = SUPER SHIFT, S, Signal, exec, omarchy-launch-or-focus signal "uwsm-app -- signal-desktop"
       bindd = SUPER SHIFT, C, Calendar, exec, omarchy-launch-webapp "https://calendar.proton.me/"
-      bindd = SUPER SHIFT, J, Jellyfin, exec, omarchy-launch-webapp "https://videos.kingfisher-halfmoon.ts.net/"
+      bindd = SUPER SHIFT, V, Jellyfin, exec, omarchy-launch-webapp "https://videos.kingfisher-halfmoon.ts.net/"
       bindd = SUPER SHIFT, E, Email, exec, omarchy-launch-webapp "https://mail.proton.me/"
       bindd = SUPER SHIFT, R, Recipes, exec, omarchy-launch-webapp "https://recipes.maximstroud.de/"
 
