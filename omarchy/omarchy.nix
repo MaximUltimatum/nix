@@ -16,7 +16,6 @@
       bindd = SUPER SHIFT, F, File manager, exec, uwsm-app -- nautilus --new-window
       bindd = SUPER SHIFT, B, Browser, exec, $browser
       bindd = SUPER SHIFT ALT, B, Browser (private), exec, $browser --private
-      bindd = SUPER SHIFT, M, Music, exec, omarchy-launch-or-focus spotify
       bindd = SUPER SHIFT, N, Editor, exec, omarchy-launch-editor
       bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus "^obsidian$" "uwsm-app -- obsidian -disable-gpu --enable-wayland-ime"
 
@@ -36,6 +35,7 @@
       bindd = SUPER SHIFT, V, Jellyfin, exec, omarchy-launch-webapp "https://videos.kingfisher-halfmoon.ts.net/"
       bindd = SUPER SHIFT, E, Email, exec, omarchy-launch-webapp "https://mail.proton.me/"
       bindd = SUPER SHIFT, R, Recipes, exec, omarchy-launch-webapp "https://recipes.maximstroud.de/"
+      bindd = SUPER SHIFT, M, Music, exec, omarchy-launch-or-focus spotify-launcher
 
       # MY EDITS:
       unbind = SUPER, K
