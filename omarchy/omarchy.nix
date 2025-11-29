@@ -25,7 +25,7 @@
       # Tweaked
       bindd = SUPER SHIFT, X, ChatGPT, exec, omarchy-launch-webapp "https://claude.ai" # TODO opencode
       bindd = SUPER SHIFT, SLASH, Passwords, exec, uwsm-app -- bitwarden-desktop
-      bindd = SUPER SHIFT, D, Discord, exec, discord
+      bindd = SUPER SHIFT, D, Discord, exec, vesktop
       bindd = SUPER SHIFT, O, Docker, exec, $terminal -e lazydocker
       bindd = SUPER SHIFT, T, Tasks, exec, omarchy-launch-or-focus-webapp "Vikunja" "https://tasks.maximstroud.de"
       bindd = SUPER SHIFT, A, Activity, exec, $terminal -e btop
@@ -60,6 +60,11 @@
       bind = SUPER CTRL, j, resizeactive, 0 40
       bind = SUPER CTRL, k, resizeactive, 0 -40
       bind = SUPER CTRL, l, resizeactive, 40 0
+
+      # For nvidia card
+      env = LIBVA_DRIVER_NAME,nvidia
+      env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+      env = WLR_NO_HARDWARE_CURSORS,1
     '';
     onChange = ''
       hyperctl reload

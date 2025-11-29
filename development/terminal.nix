@@ -7,8 +7,9 @@
     nms #sneakers decryption
     cmatrix # terminal screensaver
     wl-clipboard # for tmux copying
-    tmux
-    jrnl
+    tmux # need
+    jrnl #thoughts
+    usbimager # image usbs
   ];
 
   home.file = {
