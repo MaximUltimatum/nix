@@ -17,7 +17,6 @@
       bindd = SUPER SHIFT, B, Browser, exec, $browser
       bindd = SUPER SHIFT ALT, B, Browser (private), exec, $browser --private
       bindd = SUPER SHIFT, N, Editor, exec, omarchy-launch-editor
-      bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus "^obsidian$" "uwsm-app -- obsidian -disable-gpu --enable-wayland-ime"
 
       # If your web app url contains #, type it as ## to prevent hyprland treating it as a comment
       bindd = SUPER SHIFT CTRL, G, Google Messages, exec, omarchy-launch-or-focus-webapp "Google Messages" "https://messages.google.com/web/conversations" # TODO setup
@@ -40,8 +39,10 @@
       # MY EDITS:
       unbind = SUPER, K
       unbind = SUPER, J
+      unbind = SUPER, O
       bindd = SUPER, U, Show key bindings, exec, omarchy-menu-keybindings
       bindd = SUPER, Y, Toggle vertical/horizaontal split, togglesplit
+      bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus "^obsidian$" "uwsm-app -- obsidian -disable-gpu --enable-wayland-ime"
 
       # Vim-like window navigation (replacing arrow keys)
       bind = SUPER, h, movefocus, l
@@ -110,9 +111,6 @@
       # Enable touchpad gestures for changing workspaces
       # See https://wiki.hyprland.org/Configuring/Gestures/
       # gesture = 3, horizontal, workspace
-      input {
-        kb_options = compose:caps,altwin:swap_alt_win
-      }
     '';
   };
 }
