@@ -25,7 +25,6 @@
       bindd = SUPER SHIFT, X, ChatGPT, exec, omarchy-launch-webapp "https://claude.ai" # TODO opencode
       bindd = SUPER SHIFT, SLASH, Passwords, exec, uwsm-app -- bitwarden-desktop
       bindd = SUPER SHIFT, D, Discord, exec, vesktop
-      bindd = SUPER SHIFT, O, Docker, exec, $terminal -e lazydocker
       bindd = SUPER SHIFT, T, Tasks, exec, omarchy-launch-or-focus-webapp "Vikunja" "https://tasks.maximstroud.de"
       bindd = SUPER SHIFT, A, Activity, exec, $terminal -e btop
       bindd = SUPER SHIFT, I, Immich, exec, omarchy-launch-or-focus-webapp "Immich" "https://photos.maximstroud.de/"
@@ -81,36 +80,39 @@
         # kb_layout = us,dk,eu
         kb_layout = us
         kb_options = compose:caps # ,grp:shifts_toggle
-
+      
         # Change speed of keyboard repeat
         repeat_rate = 40
         repeat_delay = 600
-
+      
         # Start with numlock on by default
         numlock_by_default = true
-
+      
         # Increase sensitivity for mouse/trackpad (default: 0)
         # sensitivity = 0.35
-
+      
         touchpad {
           # Use natural (inverse) scrolling
           # natural_scroll = true
-
+      
           # Use two-finger clicks for right-click instead of lower-right corner
           # clickfinger_behavior = true
-
+      
           # Control the speed of your scrolling
           scroll_factor = 0.4
         }
       }
-
+      
       # Scroll nicely in the terminal
-      windowrule = scrolltouchpad 1.5, class:(Alacritty|kitty)
-      windowrule = scrolltouchpad 0.2, class:com.mitchellh.ghostty
-
+      windowrule = match:class (Alacritty|kitty), scroll_touchpad 1.5
+      windowrule = match:class com.mitchellh.ghostty, scroll_touchpad 0.2
+      
       # Enable touchpad gestures for changing workspaces
       # See https://wiki.hyprland.org/Configuring/Gestures/
       # gesture = 3, horizontal, workspace
+      #input {
+      #  kb_options = compose:caps,altwin:swap_alt_win
+      #}
     '';
   };
 }
